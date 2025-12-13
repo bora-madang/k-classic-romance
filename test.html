@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연애 유형 테스트 - 질문</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="paper-frame">
+            <div class="test-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="question-number" id="questionNumber">질문 1 / 4</p>
+            </div>
+            
+            <div class="question-section">
+                <h2 class="question-text" id="questionText"></h2>
+                <div class="dimension-badge" id="dimensionBadge"></div>
+            </div>
+            
+            <div class="options-container">
+                <button class="option-button" id="optionA" onclick="selectOption('A')">
+                    <span class="option-label">A</span>
+                    <span class="option-text" id="optionAText"></span>
+                </button>
+                <button class="option-button" id="optionB" onclick="selectOption('B')">
+                    <span class="option-label">B</span>
+                    <span class="option-text" id="optionBText"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // 테스트 페이지 초기화
+        if (typeof initTestPage === 'function') {
+            initTestPage();
+        }
+    </script>
+</body>
+</html>
+
